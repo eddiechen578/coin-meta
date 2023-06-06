@@ -1,0 +1,1529 @@
+{
+  "contractName": "DiceSpec",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "num",
+          "type": "uint256"
+        }
+      ],
+      "name": "changeRandomFactor",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint8",
+          "name": "a",
+          "type": "uint8"
+        },
+        {
+          "internalType": "uint8",
+          "name": "b",
+          "type": "uint8"
+        }
+      ],
+      "name": "max",
+      "outputs": [
+        {
+          "internalType": "uint8",
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint8",
+          "name": "a",
+          "type": "uint8"
+        },
+        {
+          "internalType": "uint8",
+          "name": "b",
+          "type": "uint8"
+        }
+      ],
+      "name": "min",
+      "outputs": [
+        {
+          "internalType": "uint8",
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "random",
+      "outputs": [
+        {
+          "internalType": "uint8",
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint8",
+          "name": "bet",
+          "type": "uint8"
+        }
+      ],
+      "name": "roll",
+      "outputs": [
+        {
+          "internalType": "uint8",
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.13+commit.abaa5c0e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"num\",\"type\":\"uint256\"}],\"name\":\"changeRandomFactor\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint8\",\"name\":\"a\",\"type\":\"uint8\"},{\"internalType\":\"uint8\",\"name\":\"b\",\"type\":\"uint8\"}],\"name\":\"max\",\"outputs\":[{\"internalType\":\"uint8\",\"name\":\"\",\"type\":\"uint8\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint8\",\"name\":\"a\",\"type\":\"uint8\"},{\"internalType\":\"uint8\",\"name\":\"b\",\"type\":\"uint8\"}],\"name\":\"min\",\"outputs\":[{\"internalType\":\"uint8\",\"name\":\"\",\"type\":\"uint8\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"random\",\"outputs\":[{\"internalType\":\"uint8\",\"name\":\"\",\"type\":\"uint8\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint8\",\"name\":\"bet\",\"type\":\"uint8\"}],\"name\":\"roll\",\"outputs\":[{\"internalType\":\"uint8\",\"name\":\"\",\"type\":\"uint8\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/DiceSpec.sol\":\"DiceSpec\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[],\"viaIR\":true},\"sources\":{\"project:/contracts/Dice.sol\":{\"keccak256\":\"0xcfb690411608c5bc28dabd05c8b059e4fb7d02aab55ba645105ac8d4854b1898\",\"urls\":[\"bzz-raw://750be8209f550179c2aceb085b1439119b0b6367d31be885e6fbf60d51a5d3c9\",\"dweb:/ipfs/QmbaK2Qs83GneyxhL8d2a5NrFFiPTME1gznB28gWyt9ZW4\"]},\"project:/contracts/DiceSpec.sol\":{\"keccak256\":\"0x78866d39ee2bbda825bc48fec06bcee386cf861734a97b9bb4462982ee83a779\",\"urls\":[\"bzz-raw://26bf8e90c76d67f868339ae3c582a91a669bb8429d1527a961f6fba087884d9c\",\"dweb:/ipfs/QmSdEVf9jZfWdHXdA7v8VrLW6HFZeEHbj96X3ZmqmdmCNZ\"]},\"project:/contracts/interface/DiceInterface.sol\":{\"keccak256\":\"0x39bfaaeb9b498a89d4bc9c34f78b97822681443f138ffb5cf968c9937efb4c96\",\"urls\":[\"bzz-raw://1b8275969bcc66577a7621825dd17520efb86fb1ee1ded5daec70981c974f1a4\",\"dweb:/ipfs/QmSFXLXUpA5KB5Ezkji6CDJP1vMUjEkrXUeAFCt7zfsimM\"]}},\"version\":1}",
+  "bytecode": "0x6080806040523461001b57600a60005561032090816100218239f35b600080fdfe60806040526004361015610013575b600080fd5b6000803560e01c908163100219ef1461007a575080635ec01e4d1461007157806363d64159146100685780636bf0f4a11461005f5763dbde2f191461005757600080fd5b61000e6101c1565b5061000e610116565b5061000e6100e9565b5061000e6100a2565b3461009f57602036600319011261009f5761009860043582546101ee565b8155604051f35b80fd5b503461000e57600036600319011261000e5760206100be610210565b60ff60405191168152f35b6004359060ff8216820361000e57565b6024359060ff8216820361000e57565b503461000e57604036600319011261000e5760206100be6101086100c9565b6101106100d9565b90610295565b503461000e57602036600319011261000e576101306100c9565b60ff6000911660028110156101ad5760010361016a57506101666101526102aa565b60405160ff90911681529081906020820190565b0390f35b6101a861016691610179610210565b61018760ff821683546101ee565b918281556101a1610196610210565b9360ff8516906101ee565b9055610295565b610152565b634e487b7160e01b82526021600452602482fd5b503461000e57604036600319011261000e5760206100be6101e06100c9565b6101e86100d9565b9061027b565b811981116101fa570190565b634e487b7160e01b600052601160045260246000fd5b6000546040519060208201904282523360601b6040840152605483015260548252608082019180831067ffffffffffffffff841117610265576006926040525190200660011981116101fa5760010160ff1690565b634e487b7160e01b600052604160045260246000fd5b9060ff811660ff831610600014610290575090565b905090565b9060ff811660ff831611600014610290575090565b6102e76102b5610210565b6102c460ff82166000546101ee565b90816000556102df6102d4610210565b9260ff8416906101ee565b60005561027b565b9056fea264697066735822122061e9ccaac70c88e29d408d8f561be8522e3176c91f619ad44f9d2130921e02d364736f6c634300080d0033",
+  "deployedBytecode": "0x60806040526004361015610013575b600080fd5b6000803560e01c908163100219ef1461007a575080635ec01e4d1461007157806363d64159146100685780636bf0f4a11461005f5763dbde2f191461005757600080fd5b61000e6101c1565b5061000e610116565b5061000e6100e9565b5061000e6100a2565b3461009f57602036600319011261009f5761009860043582546101ee565b8155604051f35b80fd5b503461000e57600036600319011261000e5760206100be610210565b60ff60405191168152f35b6004359060ff8216820361000e57565b6024359060ff8216820361000e57565b503461000e57604036600319011261000e5760206100be6101086100c9565b6101106100d9565b90610295565b503461000e57602036600319011261000e576101306100c9565b60ff6000911660028110156101ad5760010361016a57506101666101526102aa565b60405160ff90911681529081906020820190565b0390f35b6101a861016691610179610210565b61018760ff821683546101ee565b918281556101a1610196610210565b9360ff8516906101ee565b9055610295565b610152565b634e487b7160e01b82526021600452602482fd5b503461000e57604036600319011261000e5760206100be6101e06100c9565b6101e86100d9565b9061027b565b811981116101fa570190565b634e487b7160e01b600052601160045260246000fd5b6000546040519060208201904282523360601b6040840152605483015260548252608082019180831067ffffffffffffffff841117610265576006926040525190200660011981116101fa5760010160ff1690565b634e487b7160e01b600052604160045260246000fd5b9060ff811660ff831610600014610290575090565b905090565b9060ff811660ff831611600014610290575090565b6102e76102b5610210565b6102c460ff82166000546101ee565b90816000556102df6102d4610210565b9260ff8416906101ee565b60005561027b565b9056fea264697066735822122061e9ccaac70c88e29d408d8f561be8522e3176c91f619ad44f9d2130921e02d364736f6c634300080d0033",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "101:809:3:-:0;;;;;;;135:2:1;120:17;101:809:3;;;;;;;;;;;",
+  "deployedSourceMap": "101:809:3:-:0;;;;;;;;;-1:-1:-1;101:809:3;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;:::i;:::-;;;;:::i;:::-;;;;:::i;:::-;;;;;;-1:-1:-1;;101:809:3;;;;210:19:1;101:809:3;;;;210:19:1;:::i;:::-;101:809:3;;;;;;;;;;;;;;;-1:-1:-1;;101:809:3;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;:::o;:::-;;;;;;;-1:-1:-1;;101:809:3;;;;;;;;:::i;:::-;;;:::i;:::-;;;:::i;:::-;;;;;;;-1:-1:-1;;101:809:3;;;;;;:::i;:::-;;-1:-1:-1;101:809:3;;;;;;;;250:6;238:18;250:6;;281:11;101:809;281:11;;:::i;:::-;101:809;;;;;;;;;;;;;;;;;;;;235:121;880:17;101:809;723:8;;;:::i;:::-;210:19:1;101:809:3;;;;;210:19:1;:::i;:::-;101:809:3;;;;210:19:1;805:8:3;;:::i;:::-;101:809;;;;210:19:1;;:::i;:::-;101:809:3;;880:17;:::i;:::-;235:121;;101:809;-1:-1:-1;;;101:809:3;;;;;;;;;;;;;;;-1:-1:-1;;101:809:3;;;;;;;;:::i;:::-;;;:::i;:::-;;;:::i;:::-;;;;;;;;;:::o;:::-;;;;;;;;;;;;245:224:1;391:12;101:809:3;;;337:68:1;;;;354:15;;101:809:3;;371:10:1;101:809:3;;;;;;;;;;;337:68:1;;101:809:3;;;;;;;;;;;;;453:1:1;101:809:3;;;;327:79:1;;101:809:3;;;;;;;;;;;;245:224:1:o;101:809:3:-;;;;391:12:1;101:809:3;;;;;391:12:1;101:809:3;477:164:1;;101:809:3;;;;;;551:5:1;547:87;101:809:3;;;573:8:1;;:::o;547:87::-;614:8;;;:::o;649:164::-;;101:809:3;;;;;;723:5:1;719:87;101:809:3;;;745:8:1;;:::o;397:248:3:-;620:17;467:8;;:::i;:::-;210:19:1;101:809:3;;;210:19:1;101:809:3;210:19:1;:::i;:::-;101:809:3;;210:19:1;101:809:3;210:19:1;547:8:3;;:::i;:::-;101:809;;;;210:19:1;;:::i;:::-;;101:809:3;620:17;:::i;:::-;397:248;:::o",
+  "source": "pragma solidity >=0.4.22 <0.9.0;\r\n\r\nimport \"./Dice.sol\";\r\nimport \"./interface/DiceInterface.sol\";\r\n\r\ncontract DiceSpec is Dice, DiceInterface{\r\n\r\n    function roll(uint8 bet) public returns (uint8){\r\n\r\n        uint8 result;\r\n\r\n        if(Bet(bet) == Bet.Hi){\r\n            result = chooseMin();\r\n        }else {\r\n            result = chooseMax();\r\n        }\r\n\r\n        return result;\r\n    }\r\n\r\n    function chooseMin ()private returns(uint8){\r\n\r\n        uint8 roll1 = random();\r\n        changeRandomFactor(uint256(roll1));\r\n\r\n        uint8 roll2 = random();\r\n        changeRandomFactor(uint256(roll2));\r\n\r\n        return min(roll1, roll2);\r\n    }\r\n\r\n    function chooseMax ()private returns(uint8){\r\n\r\n        uint8 roll1 = random();\r\n\r\n        changeRandomFactor(uint256(roll1));\r\n\r\n        uint8 roll2 = random();\r\n\r\n        changeRandomFactor(uint256(roll2));\r\n\r\n        return max(roll1, roll2);\r\n    }\r\n\r\n}",
+  "sourcePath": "C:\\coin-meta\\backend\\contracts\\DiceSpec.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/DiceSpec.sol",
+    "exportedSymbols": {
+      "Dice": [
+        408
+      ],
+      "DiceInterface": [
+        1539
+      ],
+      "DiceSpec": [
+        568
+      ]
+    },
+    "id": 569,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 459,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".22",
+          "<",
+          "0.9",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:32:3"
+      },
+      {
+        "absolutePath": "project:/contracts/Dice.sol",
+        "file": "./Dice.sol",
+        "id": 460,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 569,
+        "sourceUnit": 409,
+        "src": "36:20:3",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "project:/contracts/interface/DiceInterface.sol",
+        "file": "./interface/DiceInterface.sol",
+        "id": 461,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 569,
+        "sourceUnit": 1540,
+        "src": "58:39:3",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 462,
+              "name": "Dice",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 408,
+              "src": "122:4:3"
+            },
+            "id": 463,
+            "nodeType": "InheritanceSpecifier",
+            "src": "122:4:3"
+          },
+          {
+            "baseName": {
+              "id": 464,
+              "name": "DiceInterface",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 1539,
+              "src": "128:13:3"
+            },
+            "id": 465,
+            "nodeType": "InheritanceSpecifier",
+            "src": "128:13:3"
+          }
+        ],
+        "canonicalName": "DiceSpec",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 568,
+        "linearizedBaseContracts": [
+          568,
+          1539,
+          408
+        ],
+        "name": "DiceSpec",
+        "nameLocation": "110:8:3",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "baseFunctions": [
+              1538
+            ],
+            "body": {
+              "id": 496,
+              "nodeType": "Block",
+              "src": "197:192:3",
+              "statements": [
+                {
+                  "assignments": [
+                    473
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 473,
+                      "mutability": "mutable",
+                      "name": "result",
+                      "nameLocation": "216:6:3",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 496,
+                      "src": "210:12:3",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      },
+                      "typeName": {
+                        "id": 472,
+                        "name": "uint8",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "210:5:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint8",
+                          "typeString": "uint8"
+                        }
+                      },
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 474,
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "210:12:3"
+                },
+                {
+                  "condition": {
+                    "commonType": {
+                      "typeIdentifier": "t_enum$_Bet_$1531",
+                      "typeString": "enum DiceInterface.Bet"
+                    },
+                    "id": 480,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "arguments": [
+                        {
+                          "id": 476,
+                          "name": "bet",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 467,
+                          "src": "242:3:3",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint8",
+                            "typeString": "uint8"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_uint8",
+                            "typeString": "uint8"
+                          }
+                        ],
+                        "id": 475,
+                        "name": "Bet",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1531,
+                        "src": "238:3:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_enum$_Bet_$1531_$",
+                          "typeString": "type(enum DiceInterface.Bet)"
+                        }
+                      },
+                      "id": 477,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "238:8:3",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_Bet_$1531",
+                        "typeString": "enum DiceInterface.Bet"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "==",
+                    "rightExpression": {
+                      "expression": {
+                        "id": 478,
+                        "name": "Bet",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1531,
+                        "src": "250:3:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_enum$_Bet_$1531_$",
+                          "typeString": "type(enum DiceInterface.Bet)"
+                        }
+                      },
+                      "id": 479,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "memberName": "Hi",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 1530,
+                      "src": "250:6:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_enum$_Bet_$1531",
+                        "typeString": "enum DiceInterface.Bet"
+                      }
+                    },
+                    "src": "238:18:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "falseBody": {
+                    "id": 492,
+                    "nodeType": "Block",
+                    "src": "309:47:3",
+                    "statements": [
+                      {
+                        "expression": {
+                          "id": 490,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "leftHandSide": {
+                            "id": 487,
+                            "name": "result",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 473,
+                            "src": "324:6:3",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint8",
+                              "typeString": "uint8"
+                            }
+                          },
+                          "nodeType": "Assignment",
+                          "operator": "=",
+                          "rightHandSide": {
+                            "arguments": [],
+                            "expression": {
+                              "argumentTypes": [],
+                              "id": 488,
+                              "name": "chooseMax",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 567,
+                              "src": "333:9:3",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_function_internal_nonpayable$__$returns$_t_uint8_$",
+                                "typeString": "function () returns (uint8)"
+                              }
+                            },
+                            "id": 489,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "kind": "functionCall",
+                            "lValueRequested": false,
+                            "names": [],
+                            "nodeType": "FunctionCall",
+                            "src": "333:11:3",
+                            "tryCall": false,
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint8",
+                              "typeString": "uint8"
+                            }
+                          },
+                          "src": "324:20:3",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint8",
+                            "typeString": "uint8"
+                          }
+                        },
+                        "id": 491,
+                        "nodeType": "ExpressionStatement",
+                        "src": "324:20:3"
+                      }
+                    ]
+                  },
+                  "id": 493,
+                  "nodeType": "IfStatement",
+                  "src": "235:121:3",
+                  "trueBody": {
+                    "id": 486,
+                    "nodeType": "Block",
+                    "src": "257:47:3",
+                    "statements": [
+                      {
+                        "expression": {
+                          "id": 484,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "leftHandSide": {
+                            "id": 481,
+                            "name": "result",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 473,
+                            "src": "272:6:3",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint8",
+                              "typeString": "uint8"
+                            }
+                          },
+                          "nodeType": "Assignment",
+                          "operator": "=",
+                          "rightHandSide": {
+                            "arguments": [],
+                            "expression": {
+                              "argumentTypes": [],
+                              "id": 482,
+                              "name": "chooseMin",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 532,
+                              "src": "281:9:3",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_function_internal_nonpayable$__$returns$_t_uint8_$",
+                                "typeString": "function () returns (uint8)"
+                              }
+                            },
+                            "id": 483,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "kind": "functionCall",
+                            "lValueRequested": false,
+                            "names": [],
+                            "nodeType": "FunctionCall",
+                            "src": "281:11:3",
+                            "tryCall": false,
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint8",
+                              "typeString": "uint8"
+                            }
+                          },
+                          "src": "272:20:3",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint8",
+                            "typeString": "uint8"
+                          }
+                        },
+                        "id": 485,
+                        "nodeType": "ExpressionStatement",
+                        "src": "272:20:3"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "expression": {
+                    "id": 494,
+                    "name": "result",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 473,
+                    "src": "375:6:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "functionReturnParameters": 471,
+                  "id": 495,
+                  "nodeType": "Return",
+                  "src": "368:13:3"
+                }
+              ]
+            },
+            "functionSelector": "6bf0f4a1",
+            "id": 497,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "roll",
+            "nameLocation": "159:4:3",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 468,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 467,
+                  "mutability": "mutable",
+                  "name": "bet",
+                  "nameLocation": "170:3:3",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 497,
+                  "src": "164:9:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 466,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "164:5:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "163:11:3"
+            },
+            "returnParameters": {
+              "id": 471,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 470,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 497,
+                  "src": "191:5:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 469,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "191:5:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "190:7:3"
+            },
+            "scope": 568,
+            "src": "150:239:3",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 531,
+              "nodeType": "Block",
+              "src": "440:205:3",
+              "statements": [
+                {
+                  "assignments": [
+                    503
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 503,
+                      "mutability": "mutable",
+                      "name": "roll1",
+                      "nameLocation": "459:5:3",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 531,
+                      "src": "453:11:3",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      },
+                      "typeName": {
+                        "id": 502,
+                        "name": "uint8",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "453:5:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint8",
+                          "typeString": "uint8"
+                        }
+                      },
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 506,
+                  "initialValue": {
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "id": 504,
+                      "name": "random",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 367,
+                      "src": "467:6:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$__$returns$_t_uint8_$",
+                        "typeString": "function () view returns (uint8)"
+                      }
+                    },
+                    "id": 505,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "467:8:3",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "453:22:3"
+                },
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "arguments": [
+                          {
+                            "id": 510,
+                            "name": "roll1",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 503,
+                            "src": "513:5:3",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint8",
+                              "typeString": "uint8"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_uint8",
+                              "typeString": "uint8"
+                            }
+                          ],
+                          "id": 509,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "nodeType": "ElementaryTypeNameExpression",
+                          "src": "505:7:3",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_uint256_$",
+                            "typeString": "type(uint256)"
+                          },
+                          "typeName": {
+                            "id": 508,
+                            "name": "uint256",
+                            "nodeType": "ElementaryTypeName",
+                            "src": "505:7:3",
+                            "typeDescriptions": {}
+                          }
+                        },
+                        "id": 511,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "typeConversion",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "505:14:3",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "id": 507,
+                      "name": "changeRandomFactor",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 333,
+                      "src": "486:18:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_uint256_$returns$__$",
+                        "typeString": "function (uint256)"
+                      }
+                    },
+                    "id": 512,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "486:34:3",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 513,
+                  "nodeType": "ExpressionStatement",
+                  "src": "486:34:3"
+                },
+                {
+                  "assignments": [
+                    515
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 515,
+                      "mutability": "mutable",
+                      "name": "roll2",
+                      "nameLocation": "539:5:3",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 531,
+                      "src": "533:11:3",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      },
+                      "typeName": {
+                        "id": 514,
+                        "name": "uint8",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "533:5:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint8",
+                          "typeString": "uint8"
+                        }
+                      },
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 518,
+                  "initialValue": {
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "id": 516,
+                      "name": "random",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 367,
+                      "src": "547:6:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$__$returns$_t_uint8_$",
+                        "typeString": "function () view returns (uint8)"
+                      }
+                    },
+                    "id": 517,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "547:8:3",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "533:22:3"
+                },
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "arguments": [
+                          {
+                            "id": 522,
+                            "name": "roll2",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 515,
+                            "src": "593:5:3",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint8",
+                              "typeString": "uint8"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_uint8",
+                              "typeString": "uint8"
+                            }
+                          ],
+                          "id": 521,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "nodeType": "ElementaryTypeNameExpression",
+                          "src": "585:7:3",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_uint256_$",
+                            "typeString": "type(uint256)"
+                          },
+                          "typeName": {
+                            "id": 520,
+                            "name": "uint256",
+                            "nodeType": "ElementaryTypeName",
+                            "src": "585:7:3",
+                            "typeDescriptions": {}
+                          }
+                        },
+                        "id": 523,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "typeConversion",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "585:14:3",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "id": 519,
+                      "name": "changeRandomFactor",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 333,
+                      "src": "566:18:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_uint256_$returns$__$",
+                        "typeString": "function (uint256)"
+                      }
+                    },
+                    "id": 524,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "566:34:3",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 525,
+                  "nodeType": "ExpressionStatement",
+                  "src": "566:34:3"
+                },
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 527,
+                        "name": "roll1",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 503,
+                        "src": "624:5:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint8",
+                          "typeString": "uint8"
+                        }
+                      },
+                      {
+                        "id": 528,
+                        "name": "roll2",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 515,
+                        "src": "631:5:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint8",
+                          "typeString": "uint8"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint8",
+                          "typeString": "uint8"
+                        },
+                        {
+                          "typeIdentifier": "t_uint8",
+                          "typeString": "uint8"
+                        }
+                      ],
+                      "id": 526,
+                      "name": "min",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 387,
+                      "src": "620:3:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_pure$_t_uint8_$_t_uint8_$returns$_t_uint8_$",
+                        "typeString": "function (uint8,uint8) pure returns (uint8)"
+                      }
+                    },
+                    "id": 529,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "620:17:3",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "functionReturnParameters": 501,
+                  "id": 530,
+                  "nodeType": "Return",
+                  "src": "613:24:3"
+                }
+              ]
+            },
+            "id": 532,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "chooseMin",
+            "nameLocation": "406:9:3",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 498,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "416:2:3"
+            },
+            "returnParameters": {
+              "id": 501,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 500,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 532,
+                  "src": "434:5:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 499,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "434:5:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "433:7:3"
+            },
+            "scope": 568,
+            "src": "397:248:3",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "private"
+          },
+          {
+            "body": {
+              "id": 566,
+              "nodeType": "Block",
+              "src": "696:209:3",
+              "statements": [
+                {
+                  "assignments": [
+                    538
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 538,
+                      "mutability": "mutable",
+                      "name": "roll1",
+                      "nameLocation": "715:5:3",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 566,
+                      "src": "709:11:3",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      },
+                      "typeName": {
+                        "id": 537,
+                        "name": "uint8",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "709:5:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint8",
+                          "typeString": "uint8"
+                        }
+                      },
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 541,
+                  "initialValue": {
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "id": 539,
+                      "name": "random",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 367,
+                      "src": "723:6:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$__$returns$_t_uint8_$",
+                        "typeString": "function () view returns (uint8)"
+                      }
+                    },
+                    "id": 540,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "723:8:3",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "709:22:3"
+                },
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "arguments": [
+                          {
+                            "id": 545,
+                            "name": "roll1",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 538,
+                            "src": "771:5:3",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint8",
+                              "typeString": "uint8"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_uint8",
+                              "typeString": "uint8"
+                            }
+                          ],
+                          "id": 544,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "nodeType": "ElementaryTypeNameExpression",
+                          "src": "763:7:3",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_uint256_$",
+                            "typeString": "type(uint256)"
+                          },
+                          "typeName": {
+                            "id": 543,
+                            "name": "uint256",
+                            "nodeType": "ElementaryTypeName",
+                            "src": "763:7:3",
+                            "typeDescriptions": {}
+                          }
+                        },
+                        "id": 546,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "typeConversion",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "763:14:3",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "id": 542,
+                      "name": "changeRandomFactor",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 333,
+                      "src": "744:18:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_uint256_$returns$__$",
+                        "typeString": "function (uint256)"
+                      }
+                    },
+                    "id": 547,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "744:34:3",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 548,
+                  "nodeType": "ExpressionStatement",
+                  "src": "744:34:3"
+                },
+                {
+                  "assignments": [
+                    550
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 550,
+                      "mutability": "mutable",
+                      "name": "roll2",
+                      "nameLocation": "797:5:3",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 566,
+                      "src": "791:11:3",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      },
+                      "typeName": {
+                        "id": 549,
+                        "name": "uint8",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "791:5:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint8",
+                          "typeString": "uint8"
+                        }
+                      },
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 553,
+                  "initialValue": {
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "id": 551,
+                      "name": "random",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 367,
+                      "src": "805:6:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$__$returns$_t_uint8_$",
+                        "typeString": "function () view returns (uint8)"
+                      }
+                    },
+                    "id": 552,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "805:8:3",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "791:22:3"
+                },
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "arguments": [
+                          {
+                            "id": 557,
+                            "name": "roll2",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 550,
+                            "src": "853:5:3",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint8",
+                              "typeString": "uint8"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_uint8",
+                              "typeString": "uint8"
+                            }
+                          ],
+                          "id": 556,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "nodeType": "ElementaryTypeNameExpression",
+                          "src": "845:7:3",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_uint256_$",
+                            "typeString": "type(uint256)"
+                          },
+                          "typeName": {
+                            "id": 555,
+                            "name": "uint256",
+                            "nodeType": "ElementaryTypeName",
+                            "src": "845:7:3",
+                            "typeDescriptions": {}
+                          }
+                        },
+                        "id": 558,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "typeConversion",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "845:14:3",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "id": 554,
+                      "name": "changeRandomFactor",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 333,
+                      "src": "826:18:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_uint256_$returns$__$",
+                        "typeString": "function (uint256)"
+                      }
+                    },
+                    "id": 559,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "826:34:3",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 560,
+                  "nodeType": "ExpressionStatement",
+                  "src": "826:34:3"
+                },
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 562,
+                        "name": "roll1",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 538,
+                        "src": "884:5:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint8",
+                          "typeString": "uint8"
+                        }
+                      },
+                      {
+                        "id": 563,
+                        "name": "roll2",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 550,
+                        "src": "891:5:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint8",
+                          "typeString": "uint8"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint8",
+                          "typeString": "uint8"
+                        },
+                        {
+                          "typeIdentifier": "t_uint8",
+                          "typeString": "uint8"
+                        }
+                      ],
+                      "id": 561,
+                      "name": "max",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 407,
+                      "src": "880:3:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_pure$_t_uint8_$_t_uint8_$returns$_t_uint8_$",
+                        "typeString": "function (uint8,uint8) pure returns (uint8)"
+                      }
+                    },
+                    "id": 564,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "880:17:3",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "functionReturnParameters": 536,
+                  "id": 565,
+                  "nodeType": "Return",
+                  "src": "873:24:3"
+                }
+              ]
+            },
+            "id": 567,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "chooseMax",
+            "nameLocation": "662:9:3",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 533,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "672:2:3"
+            },
+            "returnParameters": {
+              "id": 536,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 535,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 567,
+                  "src": "690:5:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 534,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "690:5:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "689:7:3"
+            },
+            "scope": 568,
+            "src": "653:252:3",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "private"
+          }
+        ],
+        "scope": 569,
+        "src": "101:809:3",
+        "usedErrors": []
+      }
+    ],
+    "src": "0:910:3"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.13+commit.abaa5c0e.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.13",
+  "updatedAt": "2023-06-02T09:35:23.633Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

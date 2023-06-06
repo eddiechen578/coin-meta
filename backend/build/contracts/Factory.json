@@ -1,0 +1,528 @@
+{
+  "contractName": "Factory",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "wager",
+          "type": "uint256"
+        }
+      ],
+      "name": "build",
+      "outputs": [
+        {
+          "internalType": "contract DiceInterface",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.13+commit.abaa5c0e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"wager\",\"type\":\"uint256\"}],\"name\":\"build\",\"outputs\":[{\"internalType\":\"contract DiceInterface\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/Factory.sol\":\"Factory\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[],\"viaIR\":true},\"sources\":{\"project:/contracts/Dice.sol\":{\"keccak256\":\"0xcfb690411608c5bc28dabd05c8b059e4fb7d02aab55ba645105ac8d4854b1898\",\"urls\":[\"bzz-raw://750be8209f550179c2aceb085b1439119b0b6367d31be885e6fbf60d51a5d3c9\",\"dweb:/ipfs/QmbaK2Qs83GneyxhL8d2a5NrFFiPTME1gznB28gWyt9ZW4\"]},\"project:/contracts/DiceCommon.sol\":{\"keccak256\":\"0x64a361a2aee22aa945f4908788e26149062a491154f1ffb3a04aa2d65e9655c7\",\"urls\":[\"bzz-raw://0bb5870ad80793d77e81b6cce258d709a22c8bf2a2ffbfcc8d989a49bcda9e59\",\"dweb:/ipfs/QmbsNqFW9xDcC5smkgcpWXrWpoahpCJSpfqxAaq5vdChDD\"]},\"project:/contracts/DiceSpec.sol\":{\"keccak256\":\"0x78866d39ee2bbda825bc48fec06bcee386cf861734a97b9bb4462982ee83a779\",\"urls\":[\"bzz-raw://26bf8e90c76d67f868339ae3c582a91a669bb8429d1527a961f6fba087884d9c\",\"dweb:/ipfs/QmSdEVf9jZfWdHXdA7v8VrLW6HFZeEHbj96X3ZmqmdmCNZ\"]},\"project:/contracts/Factory.sol\":{\"keccak256\":\"0xbda4dac51ea053861e7b1ed2eb99fabea1da6e9a086bf8b031c18e1fd8708f22\",\"urls\":[\"bzz-raw://87b6df58438c616ef6845bb8b46108e18d794bac58f93e2ff410db17580d2a0f\",\"dweb:/ipfs/QmesdfT7VGSFBMYn5ZVAaswxwyEUfveJa2bmWgin1QcmR7\"]},\"project:/contracts/interface/DiceInterface.sol\":{\"keccak256\":\"0x39bfaaeb9b498a89d4bc9c34f78b97822681443f138ffb5cf968c9937efb4c96\",\"urls\":[\"bzz-raw://1b8275969bcc66577a7621825dd17520efb86fb1ee1ded5daec70981c974f1a4\",\"dweb:/ipfs/QmSFXLXUpA5KB5Ezkji6CDJP1vMUjEkrXUeAFCt7zfsimM\"]}},\"version\":1}",
+  "bytecode": "0x6080806040523461001657610762908161001c8239f35b600080fdfe608080604052600436101561001357600080fd5b600090813560e01c6377fc2b191461002b5750600080fd5b34610116576020366003190112610116576100a5919067016345785d8a0000600435106100c35750604051806103418082019082821067ffffffffffffffff8311176100b6575b6103ec83390391f080156100a9575b6001600160a01b03165b6040516001600160a01b0390911681529081906020820190565b0390f35b6100b1610131565b610081565b6100be61011a565b610072565b806102ad8082019082821067ffffffffffffffff831117610109575b61013f83390391f080156100fc575b6001600160a01b031661008b565b610104610131565b6100ee565b61011161011a565b6100df565b5080fd5b50634e487b7160e01b600052604160045260246000fd5b506040513d6000823e3d90fdfe6080806040523461001b57600a60005561028c90816100218239f35b600080fdfe60806040526004361015610013575b600080fd5b6000803560e01c908163100219ef1461007a575080635ec01e4d1461007157806363d64159146100685780636bf0f4a11461005f5763dbde2f191461005757600080fd5b61000e61016d565b5061000e610116565b5061000e6100e9565b5061000e6100a2565b3461009f57602036600319011261009f57610098600435825461019a565b8155604051f35b80fd5b503461000e57600036600319011261000e5760206100be6101bc565b60ff60405191168152f35b6004359060ff8216820361000e57565b6024359060ff8216820361000e57565b503461000e57604036600319011261000e5760206100be6101086100c9565b6101106100d9565b90610241565b503461000e57602036600319011261000e576101306100c9565b50602061014960ff6101406101bc565b1660005461019a565b8060005561016260ff61015a6101bc565b16809261019a565b600055604051908152f35b503461000e57604036600319011261000e5760206100be61018c6100c9565b6101946100d9565b90610227565b811981116101a6570190565b634e487b7160e01b600052601160045260246000fd5b6000546040519060208201904282523360601b6040840152605483015260548252608082019180831067ffffffffffffffff841117610211576006926040525190200660011981116101a65760010160ff1690565b634e487b7160e01b600052604160045260246000fd5b9060ff811660ff83161060001461023c575090565b905090565b9060ff811660ff83161160001461023c57509056fea2646970667358221220c4c14dff7127c764ef61e4225882684049069acadae59d94c5c911d78c4dc95064736f6c634300080d00336080806040523461001b57600a60005561032090816100218239f35b600080fdfe60806040526004361015610013575b600080fd5b6000803560e01c908163100219ef1461007a575080635ec01e4d1461007157806363d64159146100685780636bf0f4a11461005f5763dbde2f191461005757600080fd5b61000e6101c1565b5061000e610116565b5061000e6100e9565b5061000e6100a2565b3461009f57602036600319011261009f5761009860043582546101ee565b8155604051f35b80fd5b503461000e57600036600319011261000e5760206100be610210565b60ff60405191168152f35b6004359060ff8216820361000e57565b6024359060ff8216820361000e57565b503461000e57604036600319011261000e5760206100be6101086100c9565b6101106100d9565b90610295565b503461000e57602036600319011261000e576101306100c9565b60ff6000911660028110156101ad5760010361016a57506101666101526102aa565b60405160ff90911681529081906020820190565b0390f35b6101a861016691610179610210565b61018760ff821683546101ee565b918281556101a1610196610210565b9360ff8516906101ee565b9055610295565b610152565b634e487b7160e01b82526021600452602482fd5b503461000e57604036600319011261000e5760206100be6101e06100c9565b6101e86100d9565b9061027b565b811981116101fa570190565b634e487b7160e01b600052601160045260246000fd5b6000546040519060208201904282523360601b6040840152605483015260548252608082019180831067ffffffffffffffff841117610265576006926040525190200660011981116101fa5760010160ff1690565b634e487b7160e01b600052604160045260246000fd5b9060ff811660ff831610600014610290575090565b905090565b9060ff811660ff831611600014610290575090565b6102e76102b5610210565b6102c460ff82166000546101ee565b90816000556102df6102d4610210565b9260ff8416906101ee565b60005561027b565b9056fea264697066735822122061e9ccaac70c88e29d408d8f561be8522e3176c91f619ad44f9d2130921e02d364736f6c634300080d0033a264697066735822122029591b618febe6a8101754ab9ae1dad343d5746ec05f3e52c951346caf29942c64736f6c634300080d0033",
+  "deployedBytecode": "0x608080604052600436101561001357600080fd5b600090813560e01c6377fc2b191461002b5750600080fd5b34610116576020366003190112610116576100a5919067016345785d8a0000600435106100c35750604051806103418082019082821067ffffffffffffffff8311176100b6575b6103ec83390391f080156100a9575b6001600160a01b03165b6040516001600160a01b0390911681529081906020820190565b0390f35b6100b1610131565b610081565b6100be61011a565b610072565b806102ad8082019082821067ffffffffffffffff831117610109575b61013f83390391f080156100fc575b6001600160a01b031661008b565b610104610131565b6100ee565b61011161011a565b6100df565b5080fd5b50634e487b7160e01b600052604160045260246000fd5b506040513d6000823e3d90fdfe6080806040523461001b57600a60005561028c90816100218239f35b600080fdfe60806040526004361015610013575b600080fd5b6000803560e01c908163100219ef1461007a575080635ec01e4d1461007157806363d64159146100685780636bf0f4a11461005f5763dbde2f191461005757600080fd5b61000e61016d565b5061000e610116565b5061000e6100e9565b5061000e6100a2565b3461009f57602036600319011261009f57610098600435825461019a565b8155604051f35b80fd5b503461000e57600036600319011261000e5760206100be6101bc565b60ff60405191168152f35b6004359060ff8216820361000e57565b6024359060ff8216820361000e57565b503461000e57604036600319011261000e5760206100be6101086100c9565b6101106100d9565b90610241565b503461000e57602036600319011261000e576101306100c9565b50602061014960ff6101406101bc565b1660005461019a565b8060005561016260ff61015a6101bc565b16809261019a565b600055604051908152f35b503461000e57604036600319011261000e5760206100be61018c6100c9565b6101946100d9565b90610227565b811981116101a6570190565b634e487b7160e01b600052601160045260246000fd5b6000546040519060208201904282523360601b6040840152605483015260548252608082019180831067ffffffffffffffff841117610211576006926040525190200660011981116101a65760010160ff1690565b634e487b7160e01b600052604160045260246000fd5b9060ff811660ff83161060001461023c575090565b905090565b9060ff811660ff83161160001461023c57509056fea2646970667358221220c4c14dff7127c764ef61e4225882684049069acadae59d94c5c911d78c4dc95064736f6c634300080d00336080806040523461001b57600a60005561032090816100218239f35b600080fdfe60806040526004361015610013575b600080fd5b6000803560e01c908163100219ef1461007a575080635ec01e4d1461007157806363d64159146100685780636bf0f4a11461005f5763dbde2f191461005757600080fd5b61000e6101c1565b5061000e610116565b5061000e6100e9565b5061000e6100a2565b3461009f57602036600319011261009f5761009860043582546101ee565b8155604051f35b80fd5b503461000e57600036600319011261000e5760206100be610210565b60ff60405191168152f35b6004359060ff8216820361000e57565b6024359060ff8216820361000e57565b503461000e57604036600319011261000e5760206100be6101086100c9565b6101106100d9565b90610295565b503461000e57602036600319011261000e576101306100c9565b60ff6000911660028110156101ad5760010361016a57506101666101526102aa565b60405160ff90911681529081906020820190565b0390f35b6101a861016691610179610210565b61018760ff821683546101ee565b918281556101a1610196610210565b9360ff8516906101ee565b9055610295565b610152565b634e487b7160e01b82526021600452602482fd5b503461000e57604036600319011261000e5760206100be6101e06100c9565b6101e86100d9565b9061027b565b811981116101fa570190565b634e487b7160e01b600052601160045260246000fd5b6000546040519060208201904282523360601b6040840152605483015260548252608082019180831067ffffffffffffffff841117610265576006926040525190200660011981116101fa5760010160ff1690565b634e487b7160e01b600052604160045260246000fd5b9060ff811660ff831610600014610290575090565b905090565b9060ff811660ff831611600014610290575090565b6102e76102b5610210565b6102c460ff82166000546101ee565b90816000556102df6102d4610210565b9260ff8416906101ee565b60005561027b565b9056fea264697066735822122061e9ccaac70c88e29d408d8f561be8522e3176c91f619ad44f9d2130921e02d364736f6c634300080d0033a264697066735822122029591b618febe6a8101754ab9ae1dad343d5746ec05f3e52c951346caf29942c64736f6c634300080d0033",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "124:304:4:-:0;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "124:304:4:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;124:304:4;;;;;;223:18;266;124:304;;257:27;266:18;;124:304;;;309:14;;;;;;;;;;;;;;;254:136;309:14;;;;;;;;;;254:136;-1:-1:-1;;;;;124:304:4;254:136;124:304;;-1:-1:-1;;;;;124:304:4;;;;;;;;;;;;;;;;;309:14;;;:::i;:::-;;;;;;:::i;:::-;;;254:136;362:16;;;;;;;;;;;;;;;254:136;362:16;;;;;;;;;;254:136;-1:-1:-1;;;;;124:304:4;254:136;;362:16;;;:::i;:::-;;;;;;:::i;:::-;;;124:304;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+  "source": "pragma solidity ^0.8.0;\r\n\r\nimport \"./interface/DiceInterface.sol\";\r\nimport \"./DiceCommon.sol\";\r\nimport \"./DiceSpec.sol\";\r\n\r\ncontract Factory {\r\n\r\n    function build(uint256 wager) public returns (DiceInterface){\r\n\r\n        DiceInterface dice;\r\n\r\n        if(wager >= 100000000000000000){\r\n\r\n            dice = new DiceSpec();\r\n        }else {\r\n            dice = new DiceCommon();\r\n        }\r\n\r\n        return dice;\r\n    }\r\n\r\n\r\n}",
+  "sourcePath": "C:\\coin-meta\\backend\\contracts\\Factory.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/Factory.sol",
+    "exportedSymbols": {
+      "Dice": [
+        408
+      ],
+      "DiceCommon": [
+        457
+      ],
+      "DiceInterface": [
+        1539
+      ],
+      "DiceSpec": [
+        568
+      ],
+      "Factory": [
+        609
+      ]
+    },
+    "id": 610,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 570,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:4"
+      },
+      {
+        "absolutePath": "project:/contracts/interface/DiceInterface.sol",
+        "file": "./interface/DiceInterface.sol",
+        "id": 571,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 610,
+        "sourceUnit": 1540,
+        "src": "27:39:4",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "project:/contracts/DiceCommon.sol",
+        "file": "./DiceCommon.sol",
+        "id": 572,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 610,
+        "sourceUnit": 458,
+        "src": "68:26:4",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "project:/contracts/DiceSpec.sol",
+        "file": "./DiceSpec.sol",
+        "id": 573,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 610,
+        "sourceUnit": 569,
+        "src": "96:24:4",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "Factory",
+        "contractDependencies": [
+          457,
+          568
+        ],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 609,
+        "linearizedBaseContracts": [
+          609
+        ],
+        "name": "Factory",
+        "nameLocation": "133:7:4",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 607,
+              "nodeType": "Block",
+              "src": "210:211:4",
+              "statements": [
+                {
+                  "assignments": [
+                    583
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 583,
+                      "mutability": "mutable",
+                      "name": "dice",
+                      "nameLocation": "237:4:4",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 607,
+                      "src": "223:18:4",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_DiceInterface_$1539",
+                        "typeString": "contract DiceInterface"
+                      },
+                      "typeName": {
+                        "id": 582,
+                        "nodeType": "UserDefinedTypeName",
+                        "pathNode": {
+                          "id": 581,
+                          "name": "DiceInterface",
+                          "nodeType": "IdentifierPath",
+                          "referencedDeclaration": 1539,
+                          "src": "223:13:4"
+                        },
+                        "referencedDeclaration": 1539,
+                        "src": "223:13:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_DiceInterface_$1539",
+                          "typeString": "contract DiceInterface"
+                        }
+                      },
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 584,
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "223:18:4"
+                },
+                {
+                  "condition": {
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 587,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "id": 585,
+                      "name": "wager",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 575,
+                      "src": "257:5:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": ">=",
+                    "rightExpression": {
+                      "hexValue": "313030303030303030303030303030303030",
+                      "id": 586,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "266:18:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_100000000000000000_by_1",
+                        "typeString": "int_const 100000000000000000"
+                      },
+                      "value": "100000000000000000"
+                    },
+                    "src": "257:27:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "falseBody": {
+                    "id": 603,
+                    "nodeType": "Block",
+                    "src": "340:50:4",
+                    "statements": [
+                      {
+                        "expression": {
+                          "id": 601,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "leftHandSide": {
+                            "id": 596,
+                            "name": "dice",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 583,
+                            "src": "355:4:4",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_contract$_DiceInterface_$1539",
+                              "typeString": "contract DiceInterface"
+                            }
+                          },
+                          "nodeType": "Assignment",
+                          "operator": "=",
+                          "rightHandSide": {
+                            "arguments": [],
+                            "expression": {
+                              "argumentTypes": [],
+                              "id": 599,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "nodeType": "NewExpression",
+                              "src": "362:14:4",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_function_creation_nonpayable$__$returns$_t_contract$_DiceCommon_$457_$",
+                                "typeString": "function () returns (contract DiceCommon)"
+                              },
+                              "typeName": {
+                                "id": 598,
+                                "nodeType": "UserDefinedTypeName",
+                                "pathNode": {
+                                  "id": 597,
+                                  "name": "DiceCommon",
+                                  "nodeType": "IdentifierPath",
+                                  "referencedDeclaration": 457,
+                                  "src": "366:10:4"
+                                },
+                                "referencedDeclaration": 457,
+                                "src": "366:10:4",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_contract$_DiceCommon_$457",
+                                  "typeString": "contract DiceCommon"
+                                }
+                              }
+                            },
+                            "id": 600,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "kind": "functionCall",
+                            "lValueRequested": false,
+                            "names": [],
+                            "nodeType": "FunctionCall",
+                            "src": "362:16:4",
+                            "tryCall": false,
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_contract$_DiceCommon_$457",
+                              "typeString": "contract DiceCommon"
+                            }
+                          },
+                          "src": "355:23:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_contract$_DiceInterface_$1539",
+                            "typeString": "contract DiceInterface"
+                          }
+                        },
+                        "id": 602,
+                        "nodeType": "ExpressionStatement",
+                        "src": "355:23:4"
+                      }
+                    ]
+                  },
+                  "id": 604,
+                  "nodeType": "IfStatement",
+                  "src": "254:136:4",
+                  "trueBody": {
+                    "id": 595,
+                    "nodeType": "Block",
+                    "src": "285:50:4",
+                    "statements": [
+                      {
+                        "expression": {
+                          "id": 593,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "leftHandSide": {
+                            "id": 588,
+                            "name": "dice",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 583,
+                            "src": "302:4:4",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_contract$_DiceInterface_$1539",
+                              "typeString": "contract DiceInterface"
+                            }
+                          },
+                          "nodeType": "Assignment",
+                          "operator": "=",
+                          "rightHandSide": {
+                            "arguments": [],
+                            "expression": {
+                              "argumentTypes": [],
+                              "id": 591,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "nodeType": "NewExpression",
+                              "src": "309:12:4",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_function_creation_nonpayable$__$returns$_t_contract$_DiceSpec_$568_$",
+                                "typeString": "function () returns (contract DiceSpec)"
+                              },
+                              "typeName": {
+                                "id": 590,
+                                "nodeType": "UserDefinedTypeName",
+                                "pathNode": {
+                                  "id": 589,
+                                  "name": "DiceSpec",
+                                  "nodeType": "IdentifierPath",
+                                  "referencedDeclaration": 568,
+                                  "src": "313:8:4"
+                                },
+                                "referencedDeclaration": 568,
+                                "src": "313:8:4",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_contract$_DiceSpec_$568",
+                                  "typeString": "contract DiceSpec"
+                                }
+                              }
+                            },
+                            "id": 592,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "kind": "functionCall",
+                            "lValueRequested": false,
+                            "names": [],
+                            "nodeType": "FunctionCall",
+                            "src": "309:14:4",
+                            "tryCall": false,
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_contract$_DiceSpec_$568",
+                              "typeString": "contract DiceSpec"
+                            }
+                          },
+                          "src": "302:21:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_contract$_DiceInterface_$1539",
+                            "typeString": "contract DiceInterface"
+                          }
+                        },
+                        "id": 594,
+                        "nodeType": "ExpressionStatement",
+                        "src": "302:21:4"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "expression": {
+                    "id": 605,
+                    "name": "dice",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 583,
+                    "src": "409:4:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_DiceInterface_$1539",
+                      "typeString": "contract DiceInterface"
+                    }
+                  },
+                  "functionReturnParameters": 580,
+                  "id": 606,
+                  "nodeType": "Return",
+                  "src": "402:11:4"
+                }
+              ]
+            },
+            "functionSelector": "77fc2b19",
+            "id": 608,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "build",
+            "nameLocation": "159:5:4",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 576,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 575,
+                  "mutability": "mutable",
+                  "name": "wager",
+                  "nameLocation": "173:5:4",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 608,
+                  "src": "165:13:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 574,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "165:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "164:15:4"
+            },
+            "returnParameters": {
+              "id": 580,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 579,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 608,
+                  "src": "196:13:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_DiceInterface_$1539",
+                    "typeString": "contract DiceInterface"
+                  },
+                  "typeName": {
+                    "id": 578,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 577,
+                      "name": "DiceInterface",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 1539,
+                      "src": "196:13:4"
+                    },
+                    "referencedDeclaration": 1539,
+                    "src": "196:13:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_DiceInterface_$1539",
+                      "typeString": "contract DiceInterface"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "195:15:4"
+            },
+            "scope": 609,
+            "src": "150:271:4",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          }
+        ],
+        "scope": 610,
+        "src": "124:304:4",
+        "usedErrors": []
+      }
+    ],
+    "src": "0:428:4"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.13+commit.abaa5c0e.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.13",
+  "updatedAt": "2023-06-02T09:35:23.639Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

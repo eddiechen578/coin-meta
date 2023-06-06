@@ -1,0 +1,205 @@
+{
+  "contractName": "DiceInterface",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "uint8",
+          "name": "bet",
+          "type": "uint8"
+        }
+      ],
+      "name": "roll",
+      "outputs": [
+        {
+          "internalType": "uint8",
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.13+commit.abaa5c0e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint8\",\"name\":\"bet\",\"type\":\"uint8\"}],\"name\":\"roll\",\"outputs\":[{\"internalType\":\"uint8\",\"name\":\"\",\"type\":\"uint8\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/interface/DiceInterface.sol\":\"DiceInterface\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[],\"viaIR\":true},\"sources\":{\"project:/contracts/interface/DiceInterface.sol\":{\"keccak256\":\"0x39bfaaeb9b498a89d4bc9c34f78b97822681443f138ffb5cf968c9937efb4c96\",\"urls\":[\"bzz-raw://1b8275969bcc66577a7621825dd17520efb86fb1ee1ded5daec70981c974f1a4\",\"dweb:/ipfs/QmSFXLXUpA5KB5Ezkji6CDJP1vMUjEkrXUeAFCt7zfsimM\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity >=0.4.22 <0.9.0;\r\n\r\ninterface DiceInterface {\r\n\r\n    enum Bet {\r\n        Lo,\r\n        Hi\r\n    }\r\n\r\n    function roll(uint8 bet) external returns (uint8);\r\n}",
+  "sourcePath": "C:\\coin-meta\\backend\\contracts\\interface\\DiceInterface.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/interface/DiceInterface.sol",
+    "exportedSymbols": {
+      "DiceInterface": [
+        1539
+      ]
+    },
+    "id": 1540,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1528,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".22",
+          "<",
+          "0.9",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:32:6"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "DiceInterface",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 1539,
+        "linearizedBaseContracts": [
+          1539
+        ],
+        "name": "DiceInterface",
+        "nameLocation": "46:13:6",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "DiceInterface.Bet",
+            "id": 1531,
+            "members": [
+              {
+                "id": 1529,
+                "name": "Lo",
+                "nameLocation": "89:2:6",
+                "nodeType": "EnumValue",
+                "src": "89:2:6"
+              },
+              {
+                "id": 1530,
+                "name": "Hi",
+                "nameLocation": "102:2:6",
+                "nodeType": "EnumValue",
+                "src": "102:2:6"
+              }
+            ],
+            "name": "Bet",
+            "nameLocation": "74:3:6",
+            "nodeType": "EnumDefinition",
+            "src": "69:42:6"
+          },
+          {
+            "functionSelector": "6bf0f4a1",
+            "id": 1538,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "roll",
+            "nameLocation": "128:4:6",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1534,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1533,
+                  "mutability": "mutable",
+                  "name": "bet",
+                  "nameLocation": "139:3:6",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1538,
+                  "src": "133:9:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 1532,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "133:5:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "132:11:6"
+            },
+            "returnParameters": {
+              "id": 1537,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1536,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1538,
+                  "src": "162:5:6",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 1535,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "162:5:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "161:7:6"
+            },
+            "scope": 1539,
+            "src": "119:50:6",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 1540,
+        "src": "36:136:6",
+        "usedErrors": []
+      }
+    ],
+    "src": "0:172:6"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.13+commit.abaa5c0e.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.13",
+  "updatedAt": "2023-06-02T09:35:23.656Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}
